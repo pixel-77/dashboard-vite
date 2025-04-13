@@ -2,14 +2,24 @@ import React from 'react'
 import ProfileBox from './components/profilebox'
 import Navbar from './components/navbar'
 import Schedule from './components/schedule'
+import Goalanalyis from './components/goal'
+import Swp from './components/SubProf'
 
 
 const App=()=>{
     return(
-        <div>
+        <div class="">
         <Navbar/>
-        <ProfileBox/>
-        <Schedule/>
+            <div class="flex flex-row gap-20">
+                <ProfileBox/>
+                <div class="flex flex-col">
+                    <Schedule/>
+                    <div class="flex flex-row gap-36">
+                        <Swp/>
+                        <Goalanalyis/>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
