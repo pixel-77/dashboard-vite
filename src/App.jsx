@@ -14,7 +14,7 @@ const App=()=>{
                 <ProfileBox/>
                 <div class="flex flex-col">
                     <Schedule/>
-                    <div class="flex flex-row gap-36">
+                    <div class="flex flex-row gap-36 outline rounded-md w-5xl h-80px mt-5">
                         <Swp/>
                         <Goalanalyis/>
                     </div>
