@@ -1,26 +1,24 @@
-import React from 'react'
-import ProfileBox from './components/profilebox'
-import Navbar from './components/navbar'
-import Schedule from './components/schedule'
-import Goalanalyis from './components/goal'
-import Swp from './components/SubProf'
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Dashboard from './components/dashboard'; // Import the Dashboard component
+import Login from './components/login'; // Import the Login component
 
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        {/* Route for the Login page */}
+        <Route path="/login" element={<Login />} />
 
-const App=()=>{
-    return(
-        <div class="">
-        <Navbar/>
-            <div class="flex flex-row gap-20">
-                <ProfileBox/>
-                <div class="flex flex-col">
-                    <Schedule/>
-                    <div class="flex flex-row gap-36 outline rounded-md w-5xl h-80px mt-5">
-                        <Swp/>
-                        <Goalanalyis/>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
-export default App
+        {/* Route for the Dashboard page */}
+        <Route path="/dashboard" element={<Dashboard />} />
+
+        {/* Catch-all route: Redirect to /login for any unknown routes */}
+        <Route path="*" element={<Navigate to="/login" replace />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
