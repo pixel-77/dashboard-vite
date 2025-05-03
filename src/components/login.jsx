@@ -1,9 +1,13 @@
 import React from 'react';
 
+
 function Login() {
-
-
-
+  // make state variables 
+  // think of it as malloc but for front end
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [college, setCollege] = useState('');
+  const [course, setCourse] = useState('');
 
   return (
     // Main div
