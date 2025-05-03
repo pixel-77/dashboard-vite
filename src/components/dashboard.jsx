@@ -7,11 +7,11 @@ import Swp from './SubProf';
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-row gap-20">
+    <div className="flex flex-row gap-10">
       <ProfileBox />
       <div className="flex flex-col">
         <Schedule />
-        <div className="flex flex-row gap-36 outline rounded-md w-[80rem] h-[80rem] mt-5">
+        <div className="flex flex-row gap-10  w-auto h-[80rem] mt-5">
           <Swp />
           <Goalanalyis />
         </div>

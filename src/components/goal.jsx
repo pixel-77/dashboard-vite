@@ -10,7 +10,7 @@ function Goal() {
   ];
 
   return (
-    <div className='m-0 pr-7 w-5xl'>
+    <div className='container mx-auto px-4'>
       <a className='text-blue-500 block mb-2' href="example.com">Goal Analysis-&gt;</a>
 
       <div className='grid grid-cols-1 gap-5'>

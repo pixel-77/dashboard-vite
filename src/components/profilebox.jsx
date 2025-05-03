@@ -23,7 +23,7 @@ const ProfileBox = () => {
     };
 
     return (
-        <div id="profilebox" className="w-[300px] border border-gray-300 rounded-lg shadow-sm bg-white mt-16 ml-4 relative z-0">
+        <div id="profilebox" className="w-2xs max-w-[30vw]  max-h-[120vh]  border border-gray-300 rounded-lg shadow-sm bg-white mt-16 ml-4 relative z-0">
             {/* Blue header section */}
             <div className="h-24 bg-blue-700 rounded-t-lg relative">
                 {/* Profile photo */}
