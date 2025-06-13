@@ -1,21 +1,20 @@
-// App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Dashboard from './components/dashboard'; // Import the Dashboard component
-import Login from './components/login'; // Import the Login component
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/home.jsx';
+import Discussion from './pages/discussion.jsx';
+import ResourceLibrary from './pages/ResourceLibrary.jsx';
+import Revision from './pages/revision.jsx';
+import Navbar from './components/navbar.jsx';
 
 const App = () => {
   return (
     <Router>
+      <Navbar />
       <Routes>
-        {/* Route for the Login page */}
-        <Route path="/login" element={<Login />} />
-
-        {/* Route for the Dashboard page */}
-        <Route path="/dashboard" element={<Dashboard />} />
-
-        {/* Catch-all route: Redirect to /login for any unknown routes */}
-        <Route path="*" element={<Navigate to="/login" replace />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/discussion" element={<Discussion />} />
+        <Route path="/resources" element={<ResourceLibrary />} />
+        <Route path="/revision" element={<Revision />} />
       </Routes>
     </Router>
   );
