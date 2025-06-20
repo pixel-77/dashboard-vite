@@ -9,10 +9,10 @@ const ProfileBox = () => {
         degree: "BE",
         years: "4 years",
         achievements: [
-            "Achievement 1",
-            "Achievement 2",
-            "Achievement 3",
-            "Achievement 4",
+            "quizes",
+            "leaderboard",
+            "accuracy",
+            "recall",
         ],
         classesEnrolled: [
             "Class 1",
@@ -23,7 +23,7 @@ const ProfileBox = () => {
     };
 
     return (
-        <div id="profilebox" className="w-2xs max-w-[30vw]  max-h-[120vh]  border border-gray-300 rounded-lg shadow-sm bg-white mt-16 ml-4 relative z-0">
+        <div id="profilebox" className="min-w-[15rem]  max-h-[120vh]  border border-gray-300 rounded-lg shadow-sm bg-white mt-6 ml-4 relative z-0 overflow-scroll hide-scrollbar">
             {/* Blue header section */}
             <div className="h-24 bg-blue-700 rounded-t-lg relative">
                 {/* Profile photo */}
@@ -37,15 +37,15 @@ const ProfileBox = () => {
             </div>
 
             {/* Profile content */}
-            <div className="pt-12 px-4 pb-4">
+            <div className="pt-12 px-4 pb-4 ">
                 {/* User info */}
-                <div className="flex justify-between items-start mb-4">
-                    <div>
+                <div className="flex flex-wrap md:justify-between items-start mb-4">
+                    <div className=''>
                         <h2 className="text-lg font-bold">{profile.username}</h2>
                         <p className="text-sm text-gray-600">{profile.email}</p>
                     </div>
-                    <button className="px-3 py-1 text-xs border border-gray-400 rounded-full bg-white font-medium hover:bg-gray-50 transition">
-                        edit profile
+                    <button className=" text-xs border border-gray-400 rounded-full bg-white font-medium hover:bg-gray-50 transition p-3">
+                        <p>edit profile</p>
                     </button>
                 </div>
 
@@ -65,7 +65,8 @@ const ProfileBox = () => {
                         <span>{profile.college}</span>
                     </div>
                     
-                    <div className="flex items-center gap-2 text-sm">
+                   <div className='flex flex-col xl:flex-row gap-5'>
+                     <div className="flex items-center gap-2 text-sm">
                         <svg className="w-5 h-5 text-gray-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                             <path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33 23.5 56.5T720-80H240Zm0-80h480v-640h-80v280l-100-60-100 60v-280H240v640Zm0 0v-640 640Zm200-360 100-60 100 60-100-60-100 60Z"/>
                         </svg>
@@ -78,14 +79,15 @@ const ProfileBox = () => {
                         </svg>
                         <span>{profile.years}</span>
                     </div>
+                   </div>
                 </div>
 
                 {/* Achievements */}
                 <div className="mb-6">
                     <h3 className="font-bold text-gray-800 mb-2">ACHIEVEMENT BADGES</h3>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1    lg:grid-cols-2 gap-1">
                         {profile.achievements.map((achievement, index) => (
-                            <div key={index} className="h-8 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center text-xs text-blue-800">
+                            <div key={index} className="h-8 w-fit rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center text-xs text-blue-800 p-5">
                                 {achievement}
                             </div>
                         ))}
@@ -93,11 +95,11 @@ const ProfileBox = () => {
                 </div>
 
                 {/* Classes Enrolled */}
-                <div>
+                <div className=''>
                     <h3 className="font-bold text-gray-800 mb-2">CLASSES ENROLLED</h3>
                     <div className="space-y-3">
                         {profile.classesEnrolled.map((className, index) => (
-                            <div key={index} className="h-14 rounded-lg bg-blue-100 border border-blue-200 flex items-center justify-center text-sm text-blue-800">
+                            <div key={index} className="h-14 rounded-lg bg-blue-100 border border-blue-200 flex items-center justify-center text-sm text-blue-800 ">
                                 {className}
                             </div>
                         ))}

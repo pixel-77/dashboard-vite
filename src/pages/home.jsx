@@ -9,24 +9,33 @@ import Encouragement from '../components/encourage'
 
 const Home = () => {
   return (
-    <>
-    <div className="flex flex-row justify-end">
-       <Onemoreday/>
-   <Encouragement/>
+  <>
+
   
-   </div>
-    <div className="flex flex-row gap-10">
+ <div >
+    <div className='absolute w-screen h-52 bg-blue-200 z-[0]'></div>
+
+    {/* <div className='relative hidden xl:flex justify-between z-[2]'>
+        <Onemoreday />
+        <Encouragement />
+  </div> */}
+ </div>
+
+
+
+
+  <div className="relative top-0 flex flex-row gap-10 z-[1]">
       <ProfileBox />
-      <div className="flex flex-col">
+      <div className="relative flex flex-col z[1]">
         <Schedule />
-        <div className="flex flex-row gap-10  w-auto h-[80rem] mt-5">
-          {/* subject profeciency  */}
-          <Swp />     
+        <div className="flex flex-row gap-10 w-auto h-[80rem] mt-5">
+          {/* subject proficiency */}
+          <Swp />
           <Goalanalyis />
         </div>
       </div>
-    </div>
-    </>
+  </div>
+</>
   );
 };
 
